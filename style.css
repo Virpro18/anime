@@ -1,37 +1,113 @@
-*,html,body {
-    margin:0;
+*,
+html,
+body {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
     padding: 10px;
     margin-bottom: 20px;
 }
+
 .container {
     display: flex;
     gap: 20px;
-    justify-content:center;
-    align-items:flex-start;
+    justify-content: center;
+    align-items: flex-end;
     margin: 0px 20px;
     flex-wrap: wrap;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    /* Lebar scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    /* Warna latar belakang (mirip Bootstrap) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #adb5bd;
+    /* Warna thumb (mirip Bootstrap) */
+    border-radius: 4px;
+    /* Membuat sudut membulat */
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #6c757d; /* Warna thumb saat dihover (mirip Bootstrap) */
+  }
+
 .card {
     display: flex;
     flex-direction: column;
-    padding:  10px 30px;
-    background: wheat;
+    padding: 10px 30px;
+    background: rgba(78, 70, 55, 0.144);
     justify-content: center;
     height: min-content;
     max-width: max-content;
     overflow: hidden;
     max-width: 20vw;
     min-width: 300px;
+    border: solid 1px gray ;
 }
-.card h5 {
+
+.card h4 {
     font-weight: normal;
     color: gray;
 }
+
 .Info-btn {
     margin-top: 10px;
     width: 50%;
+}
+
+.layer {
+    position: fixed;
+    top: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #02213b60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container {
+    position: fixed;
+    min-width: 300px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 20px; */
+    gap: 20px;
+    z-index: 999;
+}
+.modal-header,.modal-body {
+    display: flex;
+}
+.modal-header {
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    border-bottom: solid 1px black;
+}
+.modal-body {
+    flex-wrap: wrap;
+    padding: 0px 20px 20px 20px;
+}
+.modal-body img{
+    padding: 0 50px 0 0;
+}
+.modal-body ul{
+    list-style: none;
+    border: solid gray 2px;
+    border-radius: 3px;
+}
+.modal-body ul li {
+    padding: 6px;
+    border: solid gray 1px;
 }
